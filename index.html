@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8"> <!-- Imposta la codifica dei caratteri a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Guida alle Tabelle in HTML e CSS</title> <!-- Titolo della pagina -->
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Imposta il font predefinito */
+            line-height: 1.6; /* Altezza della linea per una migliore leggibilità */
+            margin: 20px; /* Margine esterno */
+        }
+        h1, h2 {
+            color: #333; /* Colore del testo per i titoli */
+        }
+        table {
+            width: 100%; /* Larghezza della tabella */
+            border-collapse: collapse; /* Unisce i bordi delle celle */
+            margin-bottom: 20px; /* Margine inferiore */
+        }
+        th, td {
+            border: 1px solid #ddd; /* Bordo delle celle */
+            padding: 8px; /* Spazio interno nelle celle */
+            text-align: left; /* Allinea il testo a sinistra */
+        }
+        th {
+            background-color: #f2f2f2; /* Sfondo delle intestazioni */
+        }
+        code {
+            display: block; /* Visualizza il codice come blocco */
+            background-color: #f4f4f4; /* Sfondo del blocco di codice */
+            border: 1px solid #ddd; /* Bordo del blocco di codice */
+            padding: 10px; /* Spazio interno */
+            margin-top: 10px; /* Margine superiore */
+        }
+        .zebra tr:nth-child(even) {
+            background-color: #f9f9f9; /* Sfondo per le righe pari */
+        }
+        .zebra tr:hover {
+            background-color: #f1f1f1; /* Sfondo al passaggio del mouse */
+        }
+        .caption-style caption {
+            caption-side: top; /* Posiziona la didascalia in alto */
+            font-size: 1.2em; /* Dimensione del font della didascalia */
+            margin-bottom: 10px; /* Margine inferiore */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Guida alle Tabelle in HTML e CSS</h1>
+
+<h2>Tabella Base</h2>
+<table>
+    <tr>
+        <th>Nome</th> <!-- Intestazione per la colonna "Nome" -->
+        <th>Età</th> <!-- Intestazione per la colonna "Età" -->
+        <th>Città</th> <!-- Intestazione per la colonna "Città" -->
+    </tr>
+    <tr>
+        <td>Mario</td> <!-- Cella con il nome "Mario" -->
+        <td>30</td> <!-- Cella con l'età "30" -->
+        <td>Roma</td> <!-- Cella con la città "Roma" -->
+    </tr>
+    <tr>
+        <td>Luigi</td> <!-- Cella con il nome "Luigi" -->
+        <td>25</td> <!-- Cella con l'età "25" -->
+        <td>Milano</td> <!-- Cella con la città "Milano" -->
+    </tr>
+</table>
+
+<code>
+&lt;table&gt;<br>
+    &lt;tr&gt;<br>
+        &lt;th&gt;Nome&lt;/th&gt; &lt;!-- Intestazione per la colonna "Nome" --&gt;<br>
+        &lt;th&gt;Età&lt;/th&gt; &lt;!-- Intestazione per la colonna "Età" --&gt;<br>
+        &lt;th&gt;Città&lt;/th&gt; &lt;!-- Intestazione per la colonna "Città" --&gt;<br>
+    &lt;/tr&gt;<br>
+    &lt;tr&gt;<br>
+        &lt;td&gt;Mario&lt;/td&gt; &lt;!-- Cella con il nome "Mario" --&gt;<br>
+        &lt;td&gt;30&lt;/td&gt; &lt;!-- Cella con l'età "30" --&gt;<br>
+        &lt;td&gt;Roma&lt;/td&gt; &lt;!-- Cella con la città "Roma" --&gt;<br>
+    &lt;/tr&gt;<br>
+    &lt;tr&gt;<br>
+        &lt;td&gt;Luigi&lt;/td&gt; &lt;!-- Cella con il nome "Luigi" --&gt;<br>
+        &lt;td&gt;25&lt;/td&gt; &lt;!-- Cella con l'età "25" --&gt;<br>
+        &lt;td&gt;Milano&lt;/td&gt; &lt;!-- Cella con la città "Milano" --&gt;<br>
+    &lt;/tr&gt;<br>
+&lt;/table&gt;
+</code>
+
+<h2>Aggiungere colspan e rowspan</h2>
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Età</th>
+        <th>Città</th>
+    </tr>
+    <tr>
+        <td>Mario</td>
+        <td>30</td>
+        <td rowspan="2">Roma</td> <!-- Questa cella si estende su due righe -->
+    </tr>
+    <tr>
+        <td>Luigi</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td colspan="2">Totale</td> <!-- Questa cella si estende su due colonne -->
+        <td>55</td>
+    </tr>
+</table>
+
+<code>
+&lt;table&gt;<br>
+    &lt;tr&gt;<br>
+        &lt;th&gt;Nome&lt;/th&gt;<br>
+        &lt;th&gt;Età&lt;/th&gt;<br>
+        &lt;th&gt;Città&lt;/th&gt;<br>
+    &lt;/tr&gt;<br>
+    &lt;tr&gt;<br>
+        &lt;td&gt;Mario&lt;/td&gt;<br>
+        &lt;td&gt;30&lt;/td&gt;<br>
+        &lt;td rowspan="2"&gt;Roma&lt;/td&gt; &lt;!-- Questa cella si estende su due righe --&gt;<br>
+    &lt;/tr&gt;<br>
+    &lt;tr&gt;<br>
+        &lt;td&gt;Luigi&lt;/td&gt;<br>
+        &lt;td&gt;25&lt;/td&gt;<br>
+    &lt;/tr&gt;<br>
+    &lt;tr&gt;<br>
+        &lt;td colspan="2"&gt;Totale&lt;/td&gt; &lt;!-- Questa cella si estende su due colonne --&gt;<br>
+        &lt;td&gt;55&lt;/td&gt;<br>
+    &lt;/tr&gt;<br>
+&lt;/table&gt;
+</code>
+
+<h2>Utilizzare thead e tbody</h2>
+<table>
+    <thead> <!-- Intestazione della tabella -->
+        <tr>
+            <th>Nome</th>
+            <th>Età</th>
+            <th>Città</th>
+        </tr>
+    </thead>
+    <tbody> <!-- Corpo della tabella -->
+        <tr>
+            <td>Mario</td>
+            <td>30</td>
+            <td>Roma</td>
+        </tr>
+        <tr>
+            <td>Luigi</td>
+            <td>25</td>
+            <td>Milano</td>
+        </tr>
+    </tbody>
+</table>
+
+<code>
+&lt;table&gt;<br>
+    &lt;thead&gt; &lt;!-- Intestazione della tabella --&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;th&gt;Nome&lt;/th&gt;<br>
+            &lt;th&gt;Età&lt;/th&gt;<br>
+            &lt;th&gt;Città&lt;/th&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/thead&gt;<br>
+    &lt;tbody&gt; &lt;!-- Corpo della tabella --&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Mario&lt;/td&gt;<br>
+            &lt;td&gt;30&lt;/td&gt;<br>
+            &lt;td&gt;Roma&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Luigi&lt;/td&gt;<br>
+            &lt;td&gt;25&lt;/td&gt;<br>
+            &lt;td&gt;Milano&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/tbody&gt;<br>
+&lt;/table&gt;
+</code>
+
+<h2>Stile con CSS: Righe Alternate e Hover</h2>
+<table class="zebra">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Età</th>
+            <th>Città</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mario</td>
+            <td>30</td>
+            <td>Roma</td>
+        </tr>
+        <tr>
+            <td>Luigi</td>
+            <td>25</td>
+            <td>Milano</td>
+        </tr>
+        <tr>
+            <td>Anna</td>
+            <td>28</td>
+            <td>Napoli</td>
+        </tr>
+    </tbody>
+</table>
+
+<code>
+&lt;style&gt;<br>
+    .zebra tr:nth-child(even) {<br>
+        background-color: #f9f9f9; &lt;!-- Sfondo per le righe pari --&gt;<br>
+    }<br>
+    .zebra tr:hover {<br>
+        background-color: #f1f1f1; &lt;!-- Sfondo al passaggio del mouse --&gt;<br>
+    }<br>
+&lt;/style&gt;<br>
+&lt;table class="zebra"&gt;<br>
+    &lt;thead&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;th&gt;Nome&lt;/th&gt;<br>
+            &lt;th&gt;Età&lt;/th&gt;<br>
+            &lt;th&gt;Città&lt;/th&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/thead&gt;<br>
+    &lt;tbody&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Mario&lt;/td&gt;<br>
+            &lt;td&gt;30&lt;/td&gt;<br>
+            &lt;td&gt;Roma&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Luigi&lt;/td&gt;<br>
+            &lt;td&gt;25&lt;/td&gt;<br>
+            &lt;td&gt;Milano&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Anna&lt;/td&gt;<br>
+            &lt;td&gt;28&lt;/td&gt;<br>
+            &lt;td&gt;Napoli&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/tbody&gt;<br>
+&lt;/table&gt;
+</code>
+
+<h2>Aggiungere una Didascalia</h2>
+<table class="caption-style">
+    <caption>Elenco dei partecipanti</caption> <!-- Didascalia della tabella -->
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Età</th>
+            <th>Città</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mario</td>
+            <td>30</td>
+            <td>Roma</td>
+        </tr>
+        <tr>
+            <td>Luigi</td>
+            <td>25</td>
+            <td>Milano</td>
+        </tr>
+    </tbody>
+</table>
+
+<code>
+&lt;style&gt;<br>
+    .caption-style caption {<br>
+        caption-side: top; &lt;!-- Posiziona la didascalia in alto --&gt;<br>
+        font-size: 1.2em; &lt;!-- Dimensione del font della didascalia --&gt;<br>
+        margin-bottom: 10px; &lt;!-- Margine inferiore --&gt;<br>
+    }<br>
+&lt;/style&gt;<br>
+&lt;table class="caption-style"&gt;<br>
+    &lt;caption&gt;Elenco dei partecipanti&lt;/caption&gt; &lt;!-- Didascalia della tabella --&gt;<br>
+    &lt;thead&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;th&gt;Nome&lt;/th&gt;<br>
+            &lt;th&gt;Età&lt;/th&gt;<br>
+            &lt;th&gt;Città&lt;/th&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/thead&gt;<br>
+    &lt;tbody&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Mario&lt;/td&gt;<br>
+            &lt;td&gt;30&lt;/td&gt;<br>
+            &lt;td&gt;Roma&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Luigi&lt;/td&gt;<br>
+            &lt;td&gt;25&lt;/td&gt;<br>
+            &lt;td&gt;Milano&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/tbody&gt;<br>
+&lt;/table&gt;
+</code>
+
+</body>
+</html>
