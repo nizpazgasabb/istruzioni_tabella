@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -44,6 +45,21 @@
             caption-side: top; /* Posiziona la didascalia in alto */
             font-size: 1.2em; /* Dimensione del font della didascalia */
             margin-bottom: 10px; /* Margine inferiore */
+        }
+        .bordered th, .bordered td {
+            border: 2px solid #000; /* Bordo più spesso per le celle */
+        }
+        .compact td, .compact th {
+            padding: 4px; /* Spazio interno ridotto */
+        }
+        .wide th, .wide td {
+            padding: 12px; /* Spazio interno aumentato */
+        }
+        .centered th, .centered td {
+            text-align: center; /* Testo centrato */
+        }
+        .striped tbody tr:nth-child(odd) {
+            background-color: #f2f2f2; /* Sfondo per le righe dispari */
         }
     </style>
 </head>
@@ -298,6 +314,224 @@
             &lt;td&gt;Luigi&lt;/td&gt;<br>
             &lt;td&gt;25&lt;/td&gt;<br>
             &lt;td&gt;Milano&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/tbody&gt;<br>
+&lt;/table&gt;
+</code>
+
+<h2>Tabella con Bordi Spessi</h2>
+<table class="bordered">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Età</th>
+            <th>Città</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mario</td>
+            <td>30</td>
+            <td>Roma</td>
+        </tr>
+        <tr>
+            <td>Luigi</td>
+            <td>25</td>
+            <td>Milano</td>
+        </tr>
+    </tbody>
+</table>
+
+<code>
+&lt;style&gt;<br>
+    .bordered th, .bordered td {<br>
+        border: 2px solid #000; &lt;!-- Bordo più spesso per le celle --&gt;<br>
+    }<br>
+&lt;/style&gt;<br>
+&lt;table class="bordered"&gt;<br>
+    &lt;thead&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;th&gt;Nome&lt;/th&gt;<br>
+            &lt;th&gt;Età&lt;/th&gt;<br>
+            &lt;th&gt;Città&lt;/th&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/thead&gt;<br>
+    &lt;tbody&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Mario&lt;/td&gt;<br>
+            &lt;td&gt;30&lt;/td&gt;<br>
+            &lt;td&gt;Roma&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Luigi&lt;/td&gt;<br>
+            &lt;td&gt;25&lt;/td&gt;<br>
+            &lt;td&gt;Milano&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/tbody&gt;<br>
+&lt;/table&gt;
+</code>
+
+<h2>Tabella Compatta</h2>
+<table class="compact">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Età</th>
+            <th>Città</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mario</td>
+            <td>30</td>
+            <td>Roma</td>
+        </tr>
+        <tr>
+            <td>Luigi</td>
+            <td>25</td>
+            <td>Milano</td>
+        </tr>
+    </tbody>
+</table>
+
+<code>
+&lt;style&gt;<br>
+    .compact td, .compact th {<br>
+        padding: 4px; &lt;!-- Spazio interno ridotto --&gt;<br>
+    }<br>
+&lt;/style&gt;<br>
+&lt;table class="compact"&gt;<br>
+    &lt;thead&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;th&gt;Nome&lt;/th&gt;<br>
+            &lt;th&gt;Età&lt;/th&gt;<br>
+            &lt;th&gt;Città&lt;/th&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/thead&gt;<br>
+    &lt;tbody&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Mario&lt;/td&gt;<br>
+            &lt;td&gt;30&lt;/td&gt;<br>
+            &lt;td&gt;Roma&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Luigi&lt;/td&gt;<br>
+            &lt;td&gt;25&lt;/td&gt;<br>
+            &lt;td&gt;Milano&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/tbody&gt;<br>
+&lt;/table&gt;
+</code>
+
+<h2>Tabella con Testo Centrato</h2>
+<table class="centered">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Età</th>
+            <th>Città</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mario</td>
+            <td>30</td>
+            <td>Roma</td>
+        </tr>
+        <tr>
+            <td>Luigi</td>
+            <td>25</td>
+            <td>Milano</td>
+        </tr>
+    </tbody>
+</table>
+
+<code>
+&lt;style&gt;<br>
+    .centered th, .centered td {<br>
+        text-align: center; &lt;!-- Testo centrato --&gt;<br>
+    }<br>
+&lt;/style&gt;<br>
+&lt;table class="centered"&gt;<br>
+    &lt;thead&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;th&gt;Nome&lt;/th&gt;<br>
+            &lt;th&gt;Età&lt;/th&gt;<br>
+            &lt;th&gt;Città&lt;/th&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/thead&gt;<br>
+    &lt;tbody&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Mario&lt;/td&gt;<br>
+            &lt;td&gt;30&lt;/td&gt;<br>
+            &lt;td&gt;Roma&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Luigi&lt;/td&gt;<br>
+            &lt;td&gt;25&lt;/td&gt;<br>
+            &lt;td&gt;Milano&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/tbody&gt;<br>
+&lt;/table&gt;
+</code>
+
+<h2>Tabella con Righe Striate</h2>
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Età</th>
+            <th>Città</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mario</td>
+            <td>30</td>
+            <td>Roma</td>
+        </tr>
+        <tr>
+            <td>Luigi</td>
+            <td>25</td>
+            <td>Milano</td>
+        </tr>
+        <tr>
+            <td>Anna</td>
+            <td>28</td>
+            <td>Napoli</td>
+        </tr>
+    </tbody>
+</table>
+
+<code>
+&lt;style&gt;<br>
+    .striped tbody tr:nth-child(odd) {<br>
+        background-color: #f2f2f2; &lt;!-- Sfondo per le righe dispari --&gt;<br>
+    }<br>
+&lt;/style&gt;<br>
+&lt;table class="striped"&gt;<br>
+    &lt;thead&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;th&gt;Nome&lt;/th&gt;<br>
+            &lt;th&gt;Età&lt;/th&gt;<br>
+            &lt;th&gt;Città&lt;/th&gt;<br>
+        &lt;/tr&gt;<br>
+    &lt;/thead&gt;<br>
+    &lt;tbody&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Mario&lt;/td&gt;<br>
+            &lt;td&gt;30&lt;/td&gt;<br>
+            &lt;td&gt;Roma&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Luigi&lt;/td&gt;<br>
+            &lt;td&gt;25&lt;/td&gt;<br>
+            &lt;td&gt;Milano&lt;/td&gt;<br>
+        &lt;/tr&gt;<br>
+        &lt;tr&gt;<br>
+            &lt;td&gt;Anna&lt;/td&gt;<br>
+            &lt;td&gt;28&lt;/td&gt;<br>
+            &lt;td&gt;Napoli&lt;/td&gt;<br>
         &lt;/tr&gt;<br>
     &lt;/tbody&gt;<br>
 &lt;/table&gt;
